@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <div id="content">
         <header>
             <a id="logo_link" href="index.html">
-                <img class="logo" src="images/logo.png" alt="my-resume-logo">
+                <img class="logo" src="images/logo-dark.png" alt="my-resume-logo">
             </a>
             <nav>
                 <a href="index.html">About Me</a>
@@ -34,24 +35,73 @@
                     We had to learn the basics of pygame and videogames physics and then use our object-oriented programming 
                     knowledge to develop the game. I personally worked most of the time on the collision system and platforms. 
                     Here is the link of the game’s github repository where you can check the code and actually try the game:
-                    https://github.com/mcb1510/BinBoy  
-                    <img src="images/binboy.png" alt="binboy logo" width="500px">   
+                    
+                    <a href="https://github.com/mcb1510/BinBoy"><b>https://github.com/mcb1510/BinBoy</b></a>  
+
+                    <!-- <img src="images/binboy.png" alt="binboy logo" width="500">    -->
                 </p>
+                <div class="slideshow-container">
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 4</div>
+                      <img src="/my-resume/images/img2.png" style="width:100%">
+                      <div class="text">Game Menu</div>
+                </div>
+                  
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 4</div>
+                      <img src="/my-resume/images/img1.png" style="width:100%">
+                      <div class="text">Level I</div>
+                    </div>
+                  
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 4</div>
+                      <img src="/my-resume/images/img3.png" style="width:100%">
+                      <div class="text">Info Sections</div>
+                    </div>
+                
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 4</div>
+                        <img src="/my-resume/images/img4.png" style="width:100%">
+                        <div class="text">Level II</div>
+                      </div>
+                  
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+                  <br>
+                  
+                  <!-- The dots/circles -->
+                  <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                  </div>
             </section>
             <section id="Cpp_credentials">
                 <h1>C++ User Credentials:</h1>
-                <p>
-                    The idea of the creation of this simple program was to refresh my knowledge of C++. The program contains the following C++ Syntax:
-                    Variables
-                    Expressions
-                    Conditionals
-                    Loops
-                    Functions
-                    Classes
-                    Data structure from STL (List) The program allows an user to create and login into an account. The program will then store the user's credentials in a file.  Here is the github repository link: https://github.com/mcb1510/Cpp-UserAccount
-                    <img src="images/r2d2BYUI.jpeg" alt="binboy logo" width="500px">   
-                </p>
+                <div id="cpp-text">
+                    The idea of the creation of this simple program was to refresh my knowledge of C++. The program contains the following C++ Syntax:<br>
+                    <ul>
+                        <li>Variables</li>
+                        <li>Expressions</li>
+                        <li> Conditionals</li>
+                        <li>Loops</li>
+                        <li>Functions</li>
+                        <li>Classes</li>
+                        <li>Data structure from STL (List)</li>
+                    </ul>
+                    The program allows an user to create and login into an account. 
+                    The program will then store the user's credentials in a file.  Here is the github repository link:
+                    <a href="https://github.com/mcb1510/Cpp-UserAccount"><b>https://github.com/mcb1510/Cpp-UserAccount</b></a> and 
+                    be watched here: <a href="https://www.youtube.com/watch?v=5F3j3TO9Jsc&ab_channel=MiguelCarrasco"><b>https://www.youtube.com/watch?v=5F3j3TO9Jsc&ab_channel=MiguelCarrasco</b></a>
+                </div>       
             </section>
+            <div id="cppImage">
+            <img src="images/c++.png" alt="c++" width="600">
+            </div>
         </main>
         <footer>
             <p>My Resume &copy; 2023 - Miguel Carrasco Belmar</p>
@@ -61,16 +111,46 @@
             <p><a href="site-plan.html">Site-plan</a></p>
             <div class="social_media">
                 <a href="https://www.linkedin.com/in/miguel-carrasco-belmar/"t target="_blank">
-                    <img src="images/linkedin.png" alt="linkedin icon" width="80px">
+                    <img src="images/linkedin.png" alt="linkedin icon" width="80">
                 </a>
                 <a href="https://github.com/mcb1510" target="_blank">
-                    <img src="images/github.png" alt="github icon" width="80px">
+                    <img src="images/github.png" alt="github icon" width="80">
                 </a>
                 <a href="https://instagram.com/miguel.carrb" target="_blank">
-                    <img src="images/instagram.png" alt="instagram icon" width="80px">
+                    <img src="images/instagram.png" alt="instagram icon" width="80">
                 </a>
             </div>
         </footer>
     </div>
+    <script>
+        let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+    </script> 
 </body>
 </html>
