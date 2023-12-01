@@ -272,7 +272,7 @@ footer .social_media img  {
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: 0 px;
+  margin-top: 0;
   padding: 16px;
   color: white;
   font-weight: bold;
